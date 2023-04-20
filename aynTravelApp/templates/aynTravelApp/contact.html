@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block category %}
+	{% for item in category %}
+	<li><a href="/category/{{item.pk}}">{{item.title}}</a></li> 
+	{% endfor %}
+{% endblock %}
+
+{% block title %} {% trans 'Наши Контакты' %} {% endblock %}
+	<!-- end:fh5co-header -->
+
+{% block content %}
+	<div class="fh5co-parallax" style="background-image: url('/static/images/contacts2.jpg');" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+					<div class="fh5co-intro fh5co-table-cell">
+						<h1 class="text-center">{% trans 'Наши Контакты' %}</h1>
+						<p>{% trans '(Прием звонков: 9:00 – 21:00 (Пн-Вс) )' %}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-contact-section">
+		<div class="row">
+			<div class="col-md-6">
+				<div id="map" class="fh5co-map"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					{% for j in contacts %}
+					<h3>{% trans 'Наш адрес' %}</h3>
+					<p>{{j.info}}</p>
+					<ul class="contact-info">
+						<li><i class="ti-map"></i>{{j.address}}</li>
+						<li><i class="ti-mobile"></i>{{j.TelNum}}</li>
+						<li><i class="ti-envelope"></i><a href="#">info@yoursite.com</a></li>
+					</ul>
+					{% endfor %}
+				</div>
+				<form action = "{% url 'contactForm' %}" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<button type="submit" value="send message">send message</button>
+				</form>
+
+
+
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+
+
+
+<!-- <div class="col-md-12">
+					{% csrf_token %}
+					<div class="row">
+						{% if success %}
+						<div class="col-md-6">
+							<div class="alert alert-danger">
+								<strong>{% trans 'Спасибо за сообщение' %}</strong>
+							</div>
+						{% else %}
+								<div class="form-group">
+									{{form.name}}
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									{{form.email}}
+								</div>
+								{% if form.email.errors %}
+									<div class="alert alert-danger">
+										<strong>{{form.email.errors}}</strong>
+									</div>
+								{% endif %}
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">      
+									{{form.message}}
+								</div>
+								{% if form.message.errors %}
+									<div class="alert alert-danger">
+										<strong>{{form.message.errors}}</strong>
+									</div>
+								{% endif %}
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="submit" value="{% trans 'Отправить сообщение' %}" class="btn btn-primary">
+								</div>
+							</div>
+						{% endif %}
+					</div>
+				</div> -->

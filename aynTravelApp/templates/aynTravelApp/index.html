@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block category %}
+	{% for item in category %}
+	<li><a href="/category/{{item.pk}}">{{item.title}}</a></li> 
+	{% endfor %}
+{% endblock %}
+
+{% block slider %}
+
+{% endblock %}
+
+{% block content %}
+
+ 	<!-- slider Area Start-->
+ 	<div class="slider-area ">
+	<!-- Mobile Menu -->
+	<div class="slider-active">
+		<div class="single-slider hero-overly  slider-height d-flex align-items-center" data-background="static/img/hero/h1_hero.jpg">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 col-lg-9 col-md-9">
+						<div class="hero__caption">
+							<h1>Find your <span>Next tour!</span> </h1>
+							<p>Where would you like to go?</p>
+						</div>
+					</div>
+				</div>
+				<!-- Search Box -->
+				<div class="row">
+					<div class="col-xl-12">
+						<!-- form -->
+						<!-- <form action="#" class="search-box">
+							<div class="input-form mb-30">
+								<input type="text" placeholder="When Would you like to go ?">
+							</div>
+							<div class="select-form mb-30">
+								<div class="select-itms">
+									<select name="select" id="select1">
+										<option value="">When</option>
+										<option value="">Services-1</option>
+										<option value="">Services-2</option>
+										<option value="">Services-3</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-form mb-30">
+								<a href="#">Search</a>
+							</div>	
+						</form>	 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- slider Area End-->
+
+	<!-- Favourite Places Start -->
+	<div class="favourite-place place-padding">
+		<div class="container">
+			<!-- Section Tittle -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-tittle text-center">
+						<span>FEATURED TOURS Packages</span>
+						<h2>Favourite Places</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				{% for offer in offers%}
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="single-place mb-30">
+						<div class="place-img">
+							<img src="{{offer.photo.url}}" width="370" height="370" alt="">
+						</div>
+						<div class="place-cap">
+							<div class="place-cap-top">
+								<span><i class="fas fa-star"></i><span>{{offer.mark}} Superb</span> </span>
+								<h3><a href="#">{{offer.title}}</a></h3>
+								<p class="dolor">from ${{offer.price}} <span>/ Per Person</span></p>
+							</div>
+							<div class="place-cap-bottom">
+								<ul>
+									<li><i class="far fa-clock"></i>{{offer.days}} Days</li>
+									<li><i class="far fa-clock"></i>{{offer.nights}} Nights</li>
+									<li><i class="fas fa-map-marker-alt"></i>{{offer.location1}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+	<!-- Favourite Places End -->
+
+	 <!-- Our Services Start -->
+	 <div class="our-services servic-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-tittle text-center">
+					
+						<h2>Our Services</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row d-flex justify-contnet-center">
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+					<div class="single-services text-center mb-30">
+						<div class="services-ion">
+							<span class="flaticon-tour"></span>
+						</div>
+						<div class="services-cap">
+							<h5>Tourist <br>insurance</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+					<div class="single-services text-center mb-30">
+						<div class="services-ion">
+							<span class="flaticon-pay"></span>
+						</div>
+						<div class="services-cap">
+							<h5>100% Trusted Tour<br>Agency</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+					<div class="single-services text-center mb-30">
+						<div class="services-ion">
+							<span class="flaticon-experience"></span>
+						</div>
+						<div class="services-cap">
+							<h5>Flights <br>around the world</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+					<div class="single-services text-center mb-30">
+						<div class="services-ion">
+							<span class="flaticon-good"></span>
+						</div>
+						<div class="services-cap">
+							<h5>98% Our Travelers<br>are Happy</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- Our Services End -->
+	 
+	<!-- Video Start Arera -->
+	<div class="video-area video-bg pt-200 pb-200"  data-background="static/img/service/video-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="video-caption text-center">
+						<div class="video-icon">
+							<a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" tabindex="0"><i class="fas fa-play"></i></a>
+						</div>
+						<p class="pera1">Love where you're going in the perfect time</p>
+						<p class="pera2">Travel around the world with Ayn Travel</p>
+						<p class="pera3"> Tour Booking Platform</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Video Start End -->
+	<!-- Support Company Start-->
+	<div class="support-company-area support-padding fix">
+		<div class="container">
+			{% for about in abouts %}
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6">
+					<div class="support-location-img mb-50">
+						<img src="{{ about.photo.url }}" alt="">
+						<div class="support-img-cap">
+							<span>Since 2018</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6">
+					
+					<div class="right-caption">
+						<!-- Section Tittle -->
+						<div class="section-tittle section-tittle2">
+							<span>About Our Company</span>
+							<h2>{{ about.title }}</h2>
+						</div>
+						<div class="support-caption">
+							<p>{{ about.info }}</p>
+					
+							<a href="#" class="btn border-btn">About us</a>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<!-- Support Company End-->
+	<!-- Testimonial Start -->
+
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-16 10:00+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:10
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:20
+msgid "Наши Контакты"
+msgstr "Bizning kontaktlarimiz"
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:21
+msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
+msgstr "Qo'ng'iroqlarni qabul qilish: 9:00 dan 21:00 gacha (dus-yaks)"
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:36
+msgid "Наш адрес"
+msgstr "Bizning manzil"
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:51
+msgid "Спасибо за сообщение"
+msgstr "xabar uchun rahmat"
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:80
+msgid "Отправить сообщение"
+msgstr "xabar yubormoq"
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:19
+msgid "Выберите Турпакет"
+msgstr "Tur paketini tanlang"
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:35
+#: .\aynTravelApp\templates\aynTravelApp\offerform.html:20
+#: .\templates\base.html:108
+msgid "Забронировать"
+msgstr "Bron qilish"
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:22
+#: .\aynTravelApp\templates\aynTravelApp\index.html:39
+#: .\aynTravelApp\templates\aynTravelApp\index.html:55
+msgid "Мир начинается здесь!"
+msgstr "Dunyo shu erdan boshlanadi!"
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:137
+msgid "Последние предложения"
+msgstr "Oxirgi takliflar"
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:152
+msgid "забронировать"
+msgstr "Bron qilish"
+
+#: .\templates\base.html:89 .\templates\base.html:152
+msgid "Главная"
+msgstr "Asosiy"
+
+#: .\templates\base.html:91 .\templates\base.html:153
+msgid "Турпакеты"
+msgstr "Tur paketlar"
+
+#: .\templates\base.html:107 .\templates\base.html:154
+msgid "Контакты"
+msgstr "kontaktlar"
+
+#: .\templates\base.html:143
+msgid "Все права защищены."
+msgstr "Barcha huquqlar himoyalangan."
+
+#: .\templates\base.html:150
+msgid "Компания"
+msgstr "Kompaniya"
+
+#: .\templates\base.html:158
+msgid "Our Facilities"
+msgstr "Bizning imkoniyatlarimiz"
+
+#: .\templates\base.html:160
+msgid "Ресторан"
+msgstr "Restoran"
+
+#: .\templates\base.html:161
+msgid "Бары"
+msgstr "Barlar"
+
+#: .\templates\base.html:162
+msgid "Перевозки"
+msgstr "transport"
+

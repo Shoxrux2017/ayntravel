@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-16 10:00+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:10
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:20
+msgid "Наши Контакты"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:21
+msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:36
+msgid "Наш адрес"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:51
+msgid "Спасибо за сообщение"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:80
+msgid "Отправить сообщение"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:19
+msgid "Выберите Турпакет"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:35
+#: .\aynTravelApp\templates\aynTravelApp\offerform.html:20
+#: .\templates\base.html:108
+msgid "Забронировать"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:22
+#: .\aynTravelApp\templates\aynTravelApp\index.html:39
+#: .\aynTravelApp\templates\aynTravelApp\index.html:55
+msgid "Мир начинается здесь!"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:137
+msgid "Последние предложения"
+msgstr ""
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:152
+msgid "забронировать"
+msgstr ""
+
+#: .\templates\base.html:89 .\templates\base.html:152
+msgid "Главная"
+msgstr ""
+
+#: .\templates\base.html:91 .\templates\base.html:153
+msgid "Турпакеты"
+msgstr "Турпакеты"
+
+#: .\templates\base.html:107 .\templates\base.html:154
+msgid "Контакты"
+msgstr "Контакты"
+
+#: .\templates\base.html:143
+msgid "Все права защищены."
+msgstr "Все права защищены."
+
+#: .\templates\base.html:150
+msgid "Компания"
+msgstr "Компания"
+
+#: .\templates\base.html:158
+msgid "Our Facilities"
+msgstr "Наши возможности"
+
+#: .\templates\base.html:160
+msgid "Ресторан"
+msgstr "Ресторан"
+
+#: .\templates\base.html:161
+msgid "Бары"
+msgstr "Бары"
+
+#: .\templates\base.html:162
+msgid "Перевозки"
+msgstr "Перевозки"
+
+
