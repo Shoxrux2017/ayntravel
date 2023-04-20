@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+
+    <!-- slider Area Start-->
+    <div class="slider-area ">
+        <!-- Mobile Menu -->
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="static/img/hero/about.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- slider Area End-->
+    <!-- Support Company Start-->
+    <div class="support-company-area servic-padding fix">
+        <div class="container">
+            {% for about in abouts %}
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="support-location-img mb-50">
+                        <img src="{{about.photo.url}}" alt="">
+                        <div class="support-img-cap">
+                            <span>Since 2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="right-caption">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2">
+                            <span>About Our Company</span>
+                            <h2>{{about.title}}</h2>
+                        </div>
+                        <div class="support-caption">
+                            <p>{{about.info}}</p>
+                        
+                            <a href="#" class="btn border-btn">Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Support Company End-->
+    <!-- Our Services Start -->
+    <div class="our-services place-padding">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-12">
+					<div class="section-tittle text-center">
+					
+						<h2>Our Services</h2>
+					</div>
+				</div>
+			</div>
+            <div class="row d-flex justify-contnet-center">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-tour"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>Tourist <br>insurance</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-pay"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>100% Trusted Tour<br>Agency</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-experience"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>Flights <br>around the world</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-good"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>98% Our Travelers<br>are Happy</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Services End -->
+    <!-- Video Start Arera -->
+    <div class="video-area video-bg pt-200 pb-200"  data-background="static/img/service/video-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="video-caption text-center">
+                        <div class="video-icon">
+                            <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" tabindex="0"><i class="fas fa-play"></i></a>
+                        </div>
+                        <p class="pera1">Love where you're going in the perfect time</p>
+                        <p class="pera2">Tripo is a World Leading Online</p>
+                        <p class="pera3"> Tour Booking Platform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Start End -->
+    <!-- Testimonial Start -->
+    
+    <!-- Testimonial End -->
+</main>
+{% endblock %}

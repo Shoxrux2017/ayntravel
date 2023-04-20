@@ -1,15 +1,14 @@
 from django.db import models
 
 class Offer(models.Model):
-    photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография города(страны)',blank=True, null=True)
-    # photo = models.ImageField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография города(страны)',blank=True)
-    title = models.CharField(max_length=150,verbose_name='Nazvanie tur paketa')
+    photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
+    title = models.CharField(max_length=150,verbose_name='Название турпакета')
     created_at = models.DateField(auto_now_add=True)
     info = models.TextField(blank=True)
-    location1 = models.CharField(null=True, max_length=100, verbose_name= "Lokatsiya")
-    days = models.IntegerField(verbose_name="Days")
-    mark = models.IntegerField(verbose_name="Otsenka")
-    nights = models.IntegerField(verbose_name="Nights")
+    location1 = models.CharField(null=True, max_length=100, verbose_name= "Локация")
+    days = models.IntegerField(verbose_name="Сколько дней?")
+    nights = models.IntegerField(verbose_name="Сколько ночей?")
+    mark = models.IntegerField(verbose_name="оценка")
     price = models.IntegerField(verbose_name="Цена", null=True)
     category =  models.ForeignKey('Cat', on_delete=models.PROTECT, null=True)
     is_published = models.BooleanField(default=True, verbose_name='Доступность')
@@ -18,8 +17,8 @@ class Offer(models.Model):
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name = 'предложение'
-        verbose_name_plural = 'предложения'
+        verbose_name = 'турпакет'
+        verbose_name_plural = 'турпакеты'
         ordering = ['title']
 
 
@@ -30,15 +29,15 @@ class About(models.Model):
     
     class Meta:
         verbose_name = 'информация'
-        verbose_name_plural = 'информации'
+        verbose_name_plural = 'информация'
 
 class Cat(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='город/страна', blank=True)
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name = 'категория предложений'
-        verbose_name_plural = 'категории предложений'
+        verbose_name = 'категория турпакета'
+        verbose_name_plural = 'категории турпакетов'
         ordering = ['title']
         
 class Contact(models.Model):

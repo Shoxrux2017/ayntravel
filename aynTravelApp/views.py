@@ -4,6 +4,7 @@ from .forms import ContactForm,OfferForm
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.db.models import Q 
+from django.views.generic import ListView
 def index(request):
     services = Services.objects.all()
     category = Cat.objects.all()
@@ -31,7 +32,7 @@ def contact(request):
 def aboutUs(request):
     aboutUs = About.objects.all()
     context = {
-        'about' : aboutUs,
+        'abouts' : aboutUs,
     }
     return render(request, 'aynTravelApp/about.html',context=context)
     
@@ -50,10 +51,10 @@ def contactForm(request):
     return render(request, 'aynTravelApp/contact.html',context = context)
               
 
-# def handle_uploaded_file(f):
-#     with open('Photos/%Y/%m/%d'+ f.name, 'wb+') as destination:
-#         for chunk in f.chunks():
-#             destination.write(chunk)            
+def handle_uploaded_file(f):
+    with open('Photos/%Y/%m/%d'+ f.name, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)            
 
 
 def bronform(request): 
