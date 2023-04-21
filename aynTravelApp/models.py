@@ -6,13 +6,12 @@ class Offer(models.Model):
    
     title = models.CharField(max_length=150,verbose_name='Название турпакета')
     text=CKEditor5Field('Text', config_name='extends', null=True)
-    info = models.TextField(blank=True)
-    location1 = models.CharField(null=True, max_length=100, verbose_name= "Локация")
     days = models.IntegerField(verbose_name="Сколько дней?")
     nights = models.IntegerField(verbose_name="Сколько ночей?")
     mark = models.IntegerField(verbose_name="оценка")
     price = models.IntegerField(verbose_name="Цена", null=True)
     created_at = models.DateField(auto_now_add=True)
+    category =  models.ForeignKey('Cat', on_delete=models.PROTECT, null=True)
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
     is_published = models.BooleanField(default=True, verbose_name='Доступность')
     
@@ -40,14 +39,18 @@ class About(models.Model):
         verbose_name_plural = 'информация'
 
 class Cat(models.Model):
-    title = models.CharField(max_length=150, db_index=True, verbose_name='город/страна', blank=True)
+    city = models.CharField(max_length=150, db_index=True, verbose_name='название турпакета', blank=True)
+    country = models.CharField(max_length=150, verbose_name='страна', blank=True)
+    mark = models.IntegerField(verbose_name="оценка", null=True)
+    photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
+    price = models.IntegerField(verbose_name="Цена", null=True)
 
     def __str__(self):
-        return self.title
+        return self.city
     class Meta:
         verbose_name = 'категория турпакета'
         verbose_name_plural = 'категории турпакетов'
-        ordering = ['title']
+        
 
         
 class Contact(models.Model):
@@ -71,8 +74,4 @@ class Services(models.Model):
         verbose_name = 'cервисы'
         verbose_name_plural = 'cервисы'
 
-class BookingForm(models.Model):
 
-    title = models.CharField(max_length=150,verbose_name='Название турпакета')
-    title = models.CharField(max_length=150,verbose_name='Название турпакета')
-    days = models.IntegerField(verbose_name="Сколько дней?")

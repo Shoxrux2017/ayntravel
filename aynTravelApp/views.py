@@ -14,7 +14,7 @@ def index(request):
     context = { 
         'lastoffers' : lastoffers,
         'offers' : offers,
-        'category':category,
+        'categories':category,
         'services': services,
         'abouts' : aboutUs,
     }
@@ -87,11 +87,7 @@ def get_category(request, category_id):
 
 
 def alltourpackages(request):
-    search_query = request.GET.get('search', '')
-    if search_query:
-        offer = Offer.objects.filter(Q(title__icontains = search_query) | Q(info__icontains = search_query) | Q(price__icontains = search_query))
-    else:
-        offer = Offer.objects.all()
+    offer = Offer.objects.all()
     category = Cat.objects.all()
     context = {'offers':offer,
                 'categories':category,
