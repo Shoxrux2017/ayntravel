@@ -59,8 +59,8 @@
                                <h2>{{offer.title}}
                                </h2>
                                <ul class="blog-info-link mt-3 mb-4">
-                                  <li><a href="#"><i class="fa fa-cost"></i> {{offer.price}}$</a></li>
-                                  <li><a href="#"><i class="fa fa-comments"></i> {{offer.location1}}</a></li>
+                                  <li><a href="#"><i class="dolor"></i> {{offer.price}}$</a></li>
+                                  <li><a href="#"><i class="fa fa-star"></i> {{offer.mark}}/5</a></li>
                                </ul>
                                <p class="excert">
                                 {{offer.text|safe|escape}}
@@ -97,6 +97,11 @@
                                       <input type="text" id="form3Example4cdg" class="form-control form-control-lg" value="{{offer.title}}" readonly/>
                                       <label class="form-label" for="form3Example4cdg">Tour's name</label>
                                     </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" value="{{offer.price}}" readonly/>
+                                        <label class="form-label" for="form3Example4cdg">Tour's price</label>
+                                      </div>
                     
                                  
                     
