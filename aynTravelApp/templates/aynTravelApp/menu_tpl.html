@@ -1,0 +1,29 @@
+
+  <!-- Main-menu -->
+  <div class="main-menu f-right d-none d-lg-block">
+    <nav>               
+        <ul id="navigation">                                                                                                                                     
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'offer' %}">Tourpackages</a>
+                <ul class="submenu">
+                    {% for item in categories %}
+                    <li><a href="{{ item.get_absolute_url }}">{{item.title}}</a></li> 
+                    {% endfor %}
+                </ul>
+            </li>
+            <li><a href="{% url 'bronform' %}">Book Now</a>
+                <!-- <ul class="submenu">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="single-blog.html">Blog Details</a></li>
+                </ul> -->
+            </li>
+            <!-- <li><a href="#">Pages</a>
+                <ul class="submenu">
+                    <li><a href="elements.html">Element</a></li>
+                </ul>
+            </li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>

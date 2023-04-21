@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
-from .forms import ContactForm,OfferForm
+# from .forms import ContactForm,OfferForm
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.db.models import Q 
@@ -57,18 +57,20 @@ def handle_uploaded_file(f):
             destination.write(chunk)            
 
 
-def bronform(request): 
-    if request.method == "POST":
-        form = OfferForm(request.POST,request.FILES) 
-        if form.is_valid():
-            # form.save()
-            # return redirect('home')
-            handle_uploaded_file(request.FILES['file'])
-            offer = Offer.objects.create(**form.cleaned_data)
-            return redirect(offer)
-    else:
-        form = OfferForm()
-    return render(request, 'aynTravelApp/offerform.html',{'form' : form})
+def bronform(request, category_id): 
+    offer = Offer.objects.filter(category_id=category_id)
+    categories = Cat.objects.all()
+    category = Cat.objects.filter(pk=category_id)
+    context = {'offers':offer,
+                'categories': categories,
+                'category':category      
+    }
+
+    return render(request, 'aynTravelApp/blog.html')
+
+def view_offer(request, offer_id):
+    offer = get_object_or_404(Offer, pk=offer_id)
+    return render(request, 'aynTravelApp/view_offer.html', {"offer" : offer})
     
 
 def get_category(request, category_id):
@@ -81,6 +83,8 @@ def get_category(request, category_id):
             
     }
     return render(request, 'aynTravelApp/hotel.html',context=context)
+
+
 
 def alltourpackages(request):
     search_query = request.GET.get('search', '')

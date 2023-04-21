@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% block title %} Tourpackages {% endblock %}
 {% block category %}
 	{% for item in categories %}
 	<li><a href="/category/{{item.pk}}">{{item.title}}</a></li> 
 	{% endfor %}
 {% endblock %}
 
-{% block title %} Tourpackages {% endblock %}
-
-{% block slider %}
 
 
-	{% endblock %}
+
+
+
+
 
 {% block content %}
 
@@ -20,7 +21,7 @@
     <!-- slider Area Start-->
 	<div class="slider-area ">
 		<!-- Mobile Menu -->
-		<div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
+		<div class="single-slider slider-height2 d-flex align-items-center" data-background="/static/img/hero/contact_hero.jpg">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-12">
@@ -47,11 +48,13 @@
 				</div>
 			</div>
 			<div class="row">
+				
 				{% for offer in offers %}
+			
 				<div class="col-xl-4 col-lg-4 col-md-6">
 					<div class="single-place mb-30">
 						<div class="place-img">
-							<img src="{{tourpackage.photo.url}}" alt="">
+							<img src="{{offer.photo.url}}"  width="370" height="370" alt="">
 						</div>
 						<div class="place-cap">
 							<div class="place-cap-top">
@@ -69,7 +72,9 @@
 						</div>
 					</div>
 				</div>
+			
 				{% endfor %}
+		
 			</div>
 		</div>
 	</div>
@@ -87,28 +92,3 @@
 
 
 
-
-<form>
-	<ul class="form-style-1">
-		<li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-		<li>
-			<label>Email <span class="required">*</span></label>
-			<input type="email" name="field3" class="field-long" />
-		</li>
-		<li>
-			<label>Subject</label>
-			<select name="field4" class="field-select">
-			<option value="Advertise">Advertise</option>
-			<option value="Partnership">Partnership</option>
-			<option value="General Question">General</option>
-			</select>
-		</li>
-		<li>
-			<label>Your Message <span class="required">*</span></label>
-			<textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-		</li>
-		<li>
-			<input type="submit" value="Submit" />
-		</li>
-	</ul>
-	</form>
