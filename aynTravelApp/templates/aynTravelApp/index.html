@@ -21,7 +21,7 @@
 					<div class="col-xl-9 col-lg-9 col-md-9">
 						<div class="hero__caption">
 							<h1>Find your <span>Next tour!</span> </h1>
-							<p>Where would you like to go?</p>
+							<p>{% trans 'Where would you like to go?' %}</p>
 						</div>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 				<div class="col-lg-12">
 					<div class="section-tittle text-center">
 						
-						<h2>Destinations</h2>
+						<h2>{% trans 'Destinations' %}</h2>
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@
 				<div class="col-lg-12">
 					<div class="section-tittle text-center">
 					
-						<h2>Our Services</h2>
+						<h2>{% trans 'Our Services' %}</h2>
 					</div>
 				</div>
 			</div>
@@ -115,7 +115,7 @@
 							<span class="flaticon-tour"></span>
 						</div>
 						<div class="services-cap">
-							<h5>Tourist <br>insurance</h5>
+							<h5>{% trans 'Tourist <br>insurance' %}</h5>
 						</div>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 							<span class="flaticon-pay"></span>
 						</div>
 						<div class="services-cap">
-							<h5>100% Trusted Tour<br>Agency</h5>
+							<h5>{% trans '100% Trusted Tour<br>Agency' %}</h5>
 						</div>
 					</div>
 				</div>
@@ -135,7 +135,7 @@
 							<span class="flaticon-experience"></span>
 						</div>
 						<div class="services-cap">
-							<h5>Flights <br>around the world</h5>
+							<h5>{% trans 'Flights <br>around the world' %}</h5>
 						</div>
 					</div>
 				</div>
@@ -145,7 +145,7 @@
 							<span class="flaticon-good"></span>
 						</div>
 						<div class="services-cap">
-							<h5>98% Our Travelers<br>are Happy</h5>
+							<h5>{% trans '98% Our Travelers<br>are Happy' %}</h5>
 						</div>
 					</div>
 				</div>
@@ -181,7 +181,7 @@
 					<div class="support-location-img mb-50">
 						<img src="{{ about.photo.url }}" alt="">
 						<div class="support-img-cap">
-							<span>Since 2018</span>
+							<span>{% trans 'Since 2018' %}</span>
 						</div>
 					</div>
 				</div>
@@ -190,13 +190,13 @@
 					<div class="right-caption">
 						<!-- Section Tittle -->
 						<div class="section-tittle section-tittle2">
-							<span>About Our Company</span>
+							<span>{% trans 'About Our Company' %}</span>
 							<h2>{{ about.title }}</h2>
 						</div>
 						<div class="support-caption">
 							<p>{{ about.info }}</p>
 					
-							<a href="{% url 'about' %}" class="btn border-btn">About us</a>
+							<a href="{% url 'about' %}" class="btn border-btn">{% trans 'About us' %}</a>
 						</div>
 					</div>
 			
@@ -207,7 +207,7 @@
 	</div>
 	<!-- Support Company End-->
 	<!-- Testimonial Start -->
-	<div class="testimonial-area testimonial-padding" data-background="/static/img/testmonial/testimonial_bg.jpg">
+	<div class="testimonial-area testimonial-padding" data-background="static/img/testmonial/testimonial_bg.jpg">
 		<div class="container ">
 			<div class="row d-flex justify-content-center">
 				<div class="col-xl-11 col-lg-11 col-md-9">
@@ -219,7 +219,7 @@
 							<!-- Testimonial Content -->
 							<div class="testimonial-caption ">
 								<div class="testimonial-top-cap">
-									<img src="static/img/icon/testimonial.png" alt="">
+									<img src="/static/img/icon/testimonial.png" alt="">
 									<p>{{oper.text}}</p>
 								</div>
 								<!-- founder -->
@@ -240,14 +240,14 @@
 							<!-- Testimonial Content -->
 							<div class="testimonial-caption ">
 								<div class="testimonial-top-cap">
-									<img src="assets/img/icon/testimonial.png" alt="">
+									<img src="/static/img/icon/testimonial.png" alt="">
 									<p>Logisti Group is a representative logistics operator providing full range of ser
-										of customs clearance and transportation worl.</p>
+										of customs clearance and transportation world</p>
 								</div>
 								<!-- founder -->
 								<div class="testimonial-founder d-flex align-items-center justify-content-center">
 									<div class="founder-img">
-										<img src="assets/img/testmonial/Homepage_testi.png" alt="">
+										<img src="/static/img/testmonial/Homepage_testi.png" alt="">
 									</div>
 									<div class="founder-text">
 										<span>Jessya Inn</span>

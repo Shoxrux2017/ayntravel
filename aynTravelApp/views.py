@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
-# from .forms import ContactForm,OfferForm
+from django.http import HttpResponse
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.db.models import Q 
 from django.views.generic import ListView
 def index(request):
-    services = Services.objects.all()
     category = Cat.objects.all()
     lastoffers = Offer.objects.all().order_by('created_at')[:2]
     offers = Offer.objects.all() 
@@ -16,7 +15,6 @@ def index(request):
         'lastoffers' : lastoffers,
         'offers' : offers,
         'categories':category,
-        'services': services,
         'abouts' : aboutUs,
         'operator' : operator,
     }
@@ -40,17 +38,29 @@ def aboutUs(request):
     
 def contactForm(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            send_message(form.cleaned_data['name'], form.cleaned_data['email'], form.cleaned_data['message'])
-            context = {'success':1}
+        
+        message_message = request.POST['message-message']
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message_subject = request.POST['message-subject']
+        
+        # contact = ContactForm()
+
+        # message = request.POST.get('message')
+        # name = request.POST.get('name')
+        # email = request.POST.get('email')
+        # subject = request.POST.get('subject')
+
+        # contact.message = message
+        # contact.name = name
+        # contact.email = email
+        # contact.subject = subject
+        # contact.save()
+        # return HttpResponse('<h1>Thanks for message!</h1>')
+        return render(request, 'aynTravelApp/contact.html', {'message_message':message_message, 'message_name':message_name})
 
     else:
-        form = ContactForm()
-    context = {
-        'form':form
-    }
-    return render(request, 'aynTravelApp/contact.html',context = context)
+        return render(request, 'aynTravelApp/contact.html')
               
 
 def handle_uploaded_file(f):

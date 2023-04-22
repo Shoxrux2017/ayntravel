@@ -9,5 +9,5 @@ urlpatterns = [
     path('about', aboutUs,name = 'about'),
     path('contact', contact, name='contact'),
     path('bronform', bronform, name='bronform'),
-    path('contactform', contactForm, name='contactForm'),
+    path('contactForm', contactForm, name='contactForm'),
 ]

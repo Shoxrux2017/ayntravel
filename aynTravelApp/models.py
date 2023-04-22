@@ -52,6 +52,14 @@ class Cat(models.Model):
         verbose_name_plural = 'категории турпакетов'
         
 
+class ContactForm(models.Model):
+    message = models.TextField()
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    subject = models.TextField()
+
+    def __str__(self):
+        return self.name
         
 class Contact(models.Model):
     info = models.TextField(blank=True)
@@ -61,19 +69,6 @@ class Contact(models.Model):
     class Meta:
         verbose_name = 'контакты'
         verbose_name_plural = 'контакты'
-
-class Services(models.Model):
-    icon = models.ImageField(blank=True, upload_to='Photos/%Y/%m/%d',verbose_name='иконка сервиса')
-    title = models.CharField(max_length=100, verbose_name='название сервиса')
-    photo = models.ImageField(blank=True, upload_to='Photos/%Y/%m/%d',verbose_name='фотография примера сервиса')
-    # use duoble title as in the layout
-    availability = models.BooleanField(default=True)
-    info = models.TextField(blank=True)
-
-    class Meta:
-        verbose_name = 'cервисы'
-        verbose_name_plural = 'cервисы'
-
 
 class Operator(models.Model):
     author = models.CharField(max_length=50, verbose_name='Опрератор')
