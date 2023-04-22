@@ -11,12 +11,14 @@ def index(request):
     lastoffers = Offer.objects.all().order_by('created_at')[:2]
     offers = Offer.objects.all() 
     aboutUs = About.objects.all()
+    operator = Operator.objects.all()
     context = { 
         'lastoffers' : lastoffers,
         'offers' : offers,
         'categories':category,
         'services': services,
         'abouts' : aboutUs,
+        'operator' : operator,
     }
     return render(request, template_name='aynTravelApp/index.html',context=context)
 
@@ -69,8 +71,9 @@ def bronform(request, category_id):
     return render(request, 'aynTravelApp/blog.html')
 
 def view_offer(request, offer_id):
+    category = Cat.objects.all()
     offer = get_object_or_404(Offer, pk=offer_id)
-    return render(request, 'aynTravelApp/view_offer.html', {"offer" : offer})
+    return render(request, 'aynTravelApp/view_offer.html', {"offer" : offer, "categories": category})
     
 
 def get_category(request, category_id):

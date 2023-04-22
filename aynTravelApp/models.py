@@ -35,8 +35,8 @@ class About(models.Model):
     photo = models.ImageField(upload_to='Photos/%Y/%m/%d', blank=True)
     
     class Meta:
-        verbose_name = 'информация'
-        verbose_name_plural = 'информация'
+        verbose_name = 'О нас'
+        verbose_name_plural = 'О нас'
 
 class Cat(models.Model):
     city = models.CharField(max_length=150, db_index=True, verbose_name='название турпакета', blank=True)
@@ -75,3 +75,12 @@ class Services(models.Model):
         verbose_name_plural = 'cервисы'
 
 
+class Operator(models.Model):
+    author = models.CharField(max_length=50, verbose_name='Опрератор')
+    text=CKEditor5Field('Text', config_name='extends', null=True)
+    post =  models.CharField(max_length=50, verbose_name='Должность')
+    photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография опрератора',blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Оператор'
+        verbose_name_plural = 'Операторы'

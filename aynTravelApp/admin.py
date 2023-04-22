@@ -7,4 +7,5 @@ admin.site.register(Contact)
 admin.site.register(Services)
 admin.site.register(Cat)
 admin.site.register(About)
+admin.site.register(Operator)
 
