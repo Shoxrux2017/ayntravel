@@ -42,7 +42,7 @@ class CatAdmin(TranslationAdmin):
 
 @admin.register(About)
 class AboutAdmin(TranslationAdmin):
-    list_display = ('info', 'title')
+    list_display = ('title',)
 
 @admin.register(Operator)
 class OperatorAdmin(TranslationAdmin):

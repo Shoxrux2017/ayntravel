@@ -72,7 +72,7 @@ class Contact(models.Model):
 
 class Operator(models.Model):
     author = models.CharField(max_length=50, verbose_name='Опрератор')
-    text=CKEditor5Field('Text', config_name='extends', null=True)
+    text = models.TextField('Text', null=True)
     post =  models.CharField(max_length=50, verbose_name='Должность')
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография опрератора',blank=True, null=True)
 

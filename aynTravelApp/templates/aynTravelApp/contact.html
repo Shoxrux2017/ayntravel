@@ -74,34 +74,35 @@
                         <h2 class="contact-title">{% trans 'Get in Touch' %} - {{message_name}}</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="was-validated" action="{% url 'contactForm' %}" method="post" id="contactForm">
+                        <form  action="{% url 'contactForm' %}" method="post" >
                             {% csrf_token %}
-                            <div class="row">
+                            
+                      
+                                {{ form.non_field.errors }}
+                            
+                                    <div class="form-group">
+                                       {{ form.message }}
+                            
+                                </div>
+                        
+                                    <div class="form-group">
+                                        {{ form.name }}
+                                    </div>
+                     
+                        
+                                    <div class="form-group">
+                                        {{ form.email }}
+                                    </div>
+                           
                                 <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="message-message" class="form-control w-100" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="{% trans 'Enter Message'" required></textarea>
-                                    </div>
+                                    {{ form.subject }}
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="message-name" class="form-control valid" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="{% trans 'Enter your name' %}" required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="message-email" class="form-control valid" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="{% trans 'Email' %}" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input name="message-subject" class="form-control" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="{% trans 'Enter Subject' %}" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" value="submit">{% trans 'submit' %}</button>
-                            <!-- <div class="form-group mt-3">
-                                <button type="submit" value="submit">Submit</button>
-                            </div> -->
+                      
+         
+                            
+                           
+                            <button type="submit" value="submit" class="button button-contactForm boxed-btn">{% trans 'submit' %}</button>
+                        
                         </form>
                     </div>
                     <div class="col-lg-3 offset-lg-1">

@@ -5,6 +5,8 @@ from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.db.models import Q 
 from django.views.generic import ListView
+from .forms import ContactForm
+
 def index(request):
     category = Cat.objects.all()
     lastoffers = Offer.objects.all().order_by('created_at')[:2]
@@ -31,37 +33,26 @@ def contact(request):
 
 def aboutUs(request):
     aboutUs = About.objects.all()
+    category = Cat.objects.all()
     context = {
         'abouts' : aboutUs,
+        'categories':category,
     }
     return render(request, 'aynTravelApp/about.html',context=context)
     
 def contactForm(request):
     if request.method == 'POST':
-        
-        message_message = request.POST['message-message']
-        message_name = request.POST['message-name']
-        message_email = request.POST['message-email']
-        message_subject = request.POST['message-subject']
-        
-        # contact = ContactForm()
-
-        # message = request.POST.get('message')
-        # name = request.POST.get('name')
-        # email = request.POST.get('email')
-        # subject = request.POST.get('subject')
-
-        # contact.message = message
-        # contact.name = name
-        # contact.email = email
-        # contact.subject = subject
-        # contact.save()
-        # return HttpResponse('<h1>Thanks for message!</h1>')
-        return render(request, 'aynTravelApp/contact.html', {'message_message':message_message, 'message_name':message_name})
-
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # print(form.cleaned_data)
+            # news = News.objects.create(**form.cleaned_data)
+            contact = form.save()
+            return redirect(contact)
     else:
-        return render(request, 'aynTravelApp/contact.html')
-              
+        form = ContactForm()
+    return render(request, 'aynTravelApp/contact.html', {'form': form})
+
+
 
 def handle_uploaded_file(f):
     with open('Photos/%Y/%m/%d'+ f.name, 'wb+') as destination:
