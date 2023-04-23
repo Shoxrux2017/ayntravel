@@ -69,6 +69,7 @@
 			</div>
 			<div class="row">
 				{% for category in categories %}
+				{% if category.available %}
 				<a href="{{ category.get_absolute_url }}">
 				<div class="col-xl-4 col-lg-4 col-md-6">
 					<div class="single-place mb-30">
@@ -79,7 +80,7 @@
 							<div class="place-cap-top">
 								<span><i class="fas fa-star"></i><span>{{category.mark}}/10</span> </span>
 								<h3><a href="#">{{category.city}}</a></h3>
-								<p class="dolor">from ${{category.price}} <span>/ Per Person</span></p>
+								<p class="dolor">from ${{category.price}} <span>/ {% trans 'Per Person' %}</span></p>
 							</div>
 							<div class="place-cap-bottom">
 								<ul>
@@ -90,6 +91,7 @@
 					</div>
 				</div>
 				</a>
+				{% endif %}
 				{% endfor %}
 
 			</div>
@@ -163,9 +165,9 @@
 						<div class="video-icon">
 							<a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" tabindex="0"><i class="fas fa-play"></i></a>
 						</div>
-						<p class="pera1">Love where you're going in the perfect time</p>
-						<p class="pera2">Travel around the world with Ayn Travel</p>
-						<p class="pera3"> Tour Booking Platform</p>
+						<p class="pera1">{% trans "Love where you're going in the perfect time" %}</p>
+						<p class="pera2">{% trans 'Travel around the world with Ayn Travel' %}</p>
+						<p class="pera3">{% trans 'Tour Booking Platform' %}</p>
 					</div>
 				</div>
 			</div>

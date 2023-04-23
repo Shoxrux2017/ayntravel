@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-22 15:32+0500\n"
+"POT-Creation-Date: 2023-04-23 11:23+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,57 +16,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: .\aynTravelApp\templates\aynTravelApp\about.html:15
+
+#: .\aynTravelApp\templates\aynTravelApp\about.html:21
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:7
-#: .\templates\base.html:96
+#: .\templates\base.html:98
 msgid "About Us"
 msgstr "Biz haqimizda"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:48
+#: .\aynTravelApp\templates\aynTravelApp\about.html:54
 #: .\aynTravelApp\templates\aynTravelApp\index.html:193
 msgid "About Our Company"
 msgstr "Kompaniyamiz haqida"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:54
+#: .\aynTravelApp\templates\aynTravelApp\about.html:60
 msgid "Search"
 msgstr "Izlash"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:70
+#: .\aynTravelApp\templates\aynTravelApp\about.html:76
 #: .\aynTravelApp\templates\aynTravelApp\index.html:107
 msgid "Our Services"
 msgstr "Bizning xizmatlarimiz"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:81
+#: .\aynTravelApp\templates\aynTravelApp\about.html:87
 #: .\aynTravelApp\templates\aynTravelApp\index.html:118
 msgid "Tourist <br>insurance"
 msgstr "Turistlarni <br>sug'urtalash"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:91
+#: .\aynTravelApp\templates\aynTravelApp\about.html:97
 #: .\aynTravelApp\templates\aynTravelApp\index.html:128
 #, python-format
 msgid "100%% Trusted Tour<br>Agency"
-msgstr "100% Ishonchli<br>sayohat Agentlik"
+msgstr "100%% Ishonchli<br>sayohat Agentlik"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:101
+#: .\aynTravelApp\templates\aynTravelApp\about.html:107
 #: .\aynTravelApp\templates\aynTravelApp\index.html:138
 msgid "Flights <br>around the world"
 msgstr "Dunyo bo'ylab <br> parvozlar"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:111
+#: .\aynTravelApp\templates\aynTravelApp\about.html:117
 #: .\aynTravelApp\templates\aynTravelApp\index.html:148
 #, python-format
 msgid "98%% Our Travelers<br>are Happy"
-msgstr "Sayohatchilarimizning <br>98% baxtli"
+msgstr "Sayohatchilarimizning <br>98%% baxtli"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:128
+#: .\aynTravelApp\templates\aynTravelApp\about.html:134
+#: .\aynTravelApp\templates\aynTravelApp\index.html:166
 msgid "Love where you're going in the perfect time"
 msgstr "Eng zo'r vaqtda boradigan joyingizni yaxshi ko'ring"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:129
+#: .\aynTravelApp\templates\aynTravelApp\about.html:135
 msgid "Tripo is a World Leading Online"
 msgstr "Tripo dunyodagi onlayn yetakchi hisoblanadi"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:130
+#: .\aynTravelApp\templates\aynTravelApp\about.html:136
+#: .\aynTravelApp\templates\aynTravelApp\index.html:168
 msgid "Tour Booking Platform"
 msgstr "Turni bron qilish platformasi"
 
@@ -75,9 +78,8 @@ msgid "Booking tour"
 msgstr "Turni bron qilish"
 
 #: .\aynTravelApp\templates\aynTravelApp\blog.html:31
-#: .\aynTravelApp\templates\aynTravelApp\blog.html:59
+#: .\aynTravelApp\templates\aynTravelApp\blog.html:65
 #: .\aynTravelApp\templates\aynTravelApp\view_offer.html:77
-#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:110
 msgid "Booking"
 msgstr "bron qilish"
 
@@ -96,14 +98,12 @@ msgstr "Sizning Emailingiz"
 msgid "Your phone number"
 msgstr "Sizning telefon raqamingiz"
 
-#: .\aynTravelApp\templates\aynTravelApp\blog.html:52
+#: .\aynTravelApp\templates\aynTravelApp\blog.html:51
 #: .\aynTravelApp\templates\aynTravelApp\view_offer.html:98
-#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:103
-msgid "Tour"
-msgstr "Sayohat"
+msgid "Tour's name"
+msgstr "Turning nomi"
 
 #: .\aynTravelApp\templates\aynTravelApp\contact.html:10
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:199
 msgid "Наши Контакты"
 msgstr "kontaktlarimiz"
 
@@ -111,62 +111,40 @@ msgstr "kontaktlarimiz"
 msgid "Contact us"
 msgstr "Biz bilan bog'laning"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:74
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:35
 msgid "Get in Touch"
 msgstr "Aloqa qiling"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:87
-msgid "Enter your name"
-msgstr "Ismingizni kiriting"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:92
-msgid "Email"
-msgstr "Email"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:97
-msgid "Enter Subject"
-msgstr "Mavzuni kiriting"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:101
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:67
 msgid "submit"
 msgstr "topshirish"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:111
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:112
-msgid "address"
-msgstr "manzil"
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:76
+msgid "Address"
+msgstr "Manzil"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:119
-msgid "Mon to Fri 9am to 9pm"
-msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:126
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:91
 msgid "Send us your query anytime!"
 msgstr "Istalgan vaqtda bizga so'rovingizni yuboring!"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:143
-msgid "Спасибо за сообщение!"
-msgstr "Xabaringiz uchun rahmat!"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:172
-msgid "Отправить сообщение"
-msgstr "xabar yuborish"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:200
-msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
-msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:215
-msgid "Наш адрес"
-msgstr "Bizning manzilimiz"
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:29
+msgid "Our Tourpackages"
+msgstr "Turpaketlar"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:45
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:45
 msgid "FEATURED TOURS Packages"
 msgstr "Eng Zo'r Turpaketlar"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:46
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:46
 msgid "Favourite Places"
 msgstr "Sevimli joylar"
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:63
+#: .\aynTravelApp\templates\aynTravelApp\index.html:82
+msgid "Per Person"
+msgstr "kishi boshiga"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:67
 msgid "Days"
@@ -184,6 +162,10 @@ msgstr "Qayerga bormoqchisiz?"
 msgid "Destinations"
 msgstr "Manzillar"
 
+#: .\aynTravelApp\templates\aynTravelApp\index.html:167
+msgid "Travel around the world with Ayn Travel"
+msgstr "bo'ylab sayohat qilgan joyingizni yaxshi ko'ring"
+
 #: .\aynTravelApp\templates\aynTravelApp\index.html:184
 msgid "Since 2018"
 msgstr "Since 2018"
@@ -193,67 +175,111 @@ msgid "About us"
 msgstr "Bizning haqimizda"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:6
-#: .\templates\base.html:95
+#: .\templates\base.html:97
 msgid "Home"
 msgstr "Bosh sahifa"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:8
-#: .\templates\base.html:97
+#: .\templates\base.html:99
 msgid "Tourpackages"
 msgstr "Turpaketlar"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:15
-#: .\templates\base.html:104
 msgid "Book Now"
 msgstr "Bron qilish"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:26
-#: .\templates\base.html:115
+#: .\templates\base.html:112
 msgid "Contact Us"
 msgstr "Biz bilan bog'laning"
 
-#: .\aynTravelApp\templates\aynTravelApp\offerform.html:20
-msgid "Забронировать"
-msgstr "Bron Qilish"
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:29
+msgid "Our Packages"
+msgstr "Turpaketlar"
 
-#: .\templates\base.html:64 .\templates\base.html:196
-msgid "Address"
-msgstr "Manzil"
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:103
+msgid "Tour's price"
+msgstr "Turning narxi"
 
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:110
 
+msgid "Book"
+msgstr "bron qilish"
 
-#: .\templates\base.html:179
+#: .\templates\base.html:167
+msgid "AYN TRAVEL is one of the leading travel companies in"
+msgstr "AYN TRAVEL Oʻzbekistonda filiallariga ega boʻlgan"
+
+#: .\templates\base.html:167
+msgid "Central Asia with branches in Uzbekistan"
+msgstr "Markaziy Osiyodagi yetakchi sayyohlik kompaniyalaridan biridir"
+
+#: .\templates\base.html:176
 msgid "Quick Links"
 msgstr "Tez havolalar"
 
-#: .\templates\base.html:181
+#: .\templates\base.html:178
 msgid "home"
 msgstr "Bosh sahifa"
 
-#: .\templates\base.html:182
+#: .\templates\base.html:179
 msgid "about us"
 msgstr "Biz haqimizda"
 
-#: .\templates\base.html:183
+#: .\templates\base.html:180
 msgid "tourpackages"
 msgstr "turpaketlar"
 
-#: .\templates\base.html:184
-msgid "book now"
-msgstr "bron qilish"
-
-#: .\templates\base.html:185
+#: .\templates\base.html:181
 msgid "contacts"
 msgstr "kontaktlar"
 
-#: .\templates\base.html:194
+#: .\templates\base.html:190
 msgid "Contacts"
 msgstr "Kontaktlar"
 
-#: .\templates\base.html:197
-msgid "Mon to Sun 9am to 9pm"
-msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"
-
-#: .\templates\base.html:210
+#: .\templates\base.html:206
 msgid "All rights reserved"
-msgstr ""
+msgstr "Barcha huquqlar himoyalangan"
+
+#~ msgid "Love where you"
+#~ msgstr "Ayn Travel bilan dunyo"
+
+#~ msgid "Tour"
+#~ msgstr "Sayohat"
+
+#~ msgid "Enter your name"
+#~ msgstr "Ismingizni kiriting"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Enter Subject"
+#~ msgstr "Mavzuni kiriting"
+
+#~ msgid "address"
+#~ msgstr "manzil"
+
+#~ msgid "Mon to Fri 9am to 9pm"
+#~ msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"
+
+#~ msgid "Спасибо за сообщение!"
+#~ msgstr "Xabaringiz uchun rahmat!"
+
+#~ msgid "Отправить сообщение"
+#~ msgstr "xabar yuborish"
+
+#~ msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
+#~ msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"
+
+#~ msgid "Наш адрес"
+#~ msgstr "Bizning manzilimiz"
+
+#~ msgid "Забронировать"
+#~ msgstr "Bron Qilish"
+
+#~ msgid "book now"
+#~ msgstr "bron qilish"
+
+#~ msgid "Mon to Sun 9am to 9pm"
+#~ msgstr "Dushanbadan jumaga soat 9:00 dan 21:00 gacha"

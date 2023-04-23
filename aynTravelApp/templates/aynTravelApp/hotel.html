@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="hero-cap text-center">
-							<h2>Our Packages</h2>
+							<h2>{% trans 'Our Tourpackages' %}</h2>
 						</div>
 					</div>
 				</div>
@@ -50,17 +50,18 @@
 			<div class="row">
 				
 				{% for offer in offers %}
+				{% if offer.available %}
 				<a href="{{ offer.get_absolute_url }}">
 				<div class="col-xl-4 col-lg-4 col-md-6">
 					<div class="single-place mb-30">
 						<div class="place-img">
 							<img src="{{offer.photo.url}}"  width="370" height="370" alt="">
-						</div>
+						</div> 	
 						<div class="place-cap">
 							<div class="place-cap-top">
-								<span><i class="fas fa-star"></i><span>{{offer.mark}} Superb</span> </span>
+								<span><i class="fas fa-star"></i><span>{{offer.mark}}</span> </span>
 								<h3><a href="#">{{offer.title}}</a></h3>
-								<p class="dolor">${{offer.price}} <span>/ Per Person</span></p>
+								<p class="dolor">${{offer.price}} <span>/ {% trans 'Per Person' %}</span></p>
 							</div>
 							<div class="place-cap-bottom">
 								<ul>
@@ -72,7 +73,8 @@
 						</div>
 					</div>
 				</div>
-			</a>
+				</a>
+				{% endif %}
 				{% endfor %}
 		
 			</div>

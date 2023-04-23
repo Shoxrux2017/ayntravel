@@ -32,7 +32,7 @@ class OfferAdmin(TranslationAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(TranslationAdmin):
-    list_display = ('info', 'address')
+    list_display = ('info', 'address', 'working_time')
 
 
 @admin.register(Cat)

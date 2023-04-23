@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'aynTravelnew',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -147,4 +147,8 @@ STATICFILES_DIRS = []
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # Нужно закомментить эту строчку при деплое
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'b13ecfa6816b57'
+EMAIL_HOST_PASSWORD = 'b31b72b6c3a134'
+EMAIL_PORT = '2525'

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-22 15:13+0500\n"
+"POT-Creation-Date: 2023-04-23 10:43+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,58 +17,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:15
+#: .\aynTravelApp\templates\aynTravelApp\about.html:21
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:7
-#: .\templates\base.html:96
+#: .\templates\base.html:98
 msgid "About Us"
 msgstr "About Us"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:48
+#: .\aynTravelApp\templates\aynTravelApp\about.html:54
 #: .\aynTravelApp\templates\aynTravelApp\index.html:193
 msgid "About Our Company"
 msgstr "About Our Company"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:54
+#: .\aynTravelApp\templates\aynTravelApp\about.html:60
 msgid "Search"
 msgstr "Search"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:70
+#: .\aynTravelApp\templates\aynTravelApp\about.html:76
 #: .\aynTravelApp\templates\aynTravelApp\index.html:107
 msgid "Our Services"
 msgstr "Our Services"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:81
+#: .\aynTravelApp\templates\aynTravelApp\about.html:87
 #: .\aynTravelApp\templates\aynTravelApp\index.html:118
 msgid "Tourist <br>insurance"
 msgstr "Tourist <br> insurance"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:91
+#: .\aynTravelApp\templates\aynTravelApp\about.html:97
 #: .\aynTravelApp\templates\aynTravelApp\index.html:128
 #, fuzzy, python-format
 #| msgid "100% Trusted Tour<br>Agency"
 msgid "100%% Trusted Tour<br>Agency"
 msgstr "100% Trusted Tour<br>Agency"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:101
+#: .\aynTravelApp\templates\aynTravelApp\about.html:107
 #: .\aynTravelApp\templates\aynTravelApp\index.html:138
 msgid "Flights <br>around the world"
 msgstr "Flights <br>around the world"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:111
+#: .\aynTravelApp\templates\aynTravelApp\about.html:117
 #: .\aynTravelApp\templates\aynTravelApp\index.html:148
 #, python-format
 msgid "98%% Our Travelers<br>are Happy"
 msgstr "98%% Our Travelers<br>are Happy"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:128
+#: .\aynTravelApp\templates\aynTravelApp\about.html:134
 msgid "Love where you're going in the perfect time"
 msgstr "Love where you're going in the perfect time"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:129
+#: .\aynTravelApp\templates\aynTravelApp\about.html:135
 msgid "Tripo is a World Leading Online"
 msgstr "Tripo is a World Leading Online"
 
-#: .\aynTravelApp\templates\aynTravelApp\about.html:130
+#: .\aynTravelApp\templates\aynTravelApp\about.html:136
+#: .\aynTravelApp\templates\aynTravelApp\index.html:168
 msgid "Tour Booking Platform"
 msgstr "Tour Booking Platform"
 
@@ -77,7 +78,7 @@ msgid "Booking tour"
 msgstr "Booking tour"
 
 #: .\aynTravelApp\templates\aynTravelApp\blog.html:31
-#: .\aynTravelApp\templates\aynTravelApp\blog.html:59
+#: .\aynTravelApp\templates\aynTravelApp\blog.html:65
 #: .\aynTravelApp\templates\aynTravelApp\view_offer.html:77
 #: .\aynTravelApp\templates\aynTravelApp\view_offer.html:110
 msgid "Booking"
@@ -98,14 +99,13 @@ msgstr "Your Email"
 msgid "Your phone number"
 msgstr "Your phone number"
 
-#: .\aynTravelApp\templates\aynTravelApp\blog.html:52
+#: .\aynTravelApp\templates\aynTravelApp\blog.html:51
 #: .\aynTravelApp\templates\aynTravelApp\view_offer.html:98
-#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:103
-msgid "Tour"
-msgstr "Tour"
+
+msgid "Tour's name"
+msgstr "Tour's Name"
 
 #: .\aynTravelApp\templates\aynTravelApp\contact.html:10
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:199
 msgid "Наши Контакты"
 msgstr "Your contacts"
 
@@ -113,62 +113,41 @@ msgstr "Your contacts"
 msgid "Contact us"
 msgstr "Contact us"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:74
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:35
 msgid "Get in Touch"
 msgstr "Get in Touch"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:87
-msgid "Enter your name"
-msgstr "Enter your name"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:92
-msgid "Email"
-msgstr "Email"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:97
-msgid "Enter Subject"
-msgstr "Enter Subject"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:101
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:67
 msgid "submit"
 msgstr "submit"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:111
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:112
-msgid "address"
-msgstr "address"
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:76
+msgid "Address"
+msgstr "Address"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:119
-msgid "Mon to Fri 9am to 9pm"
-msgstr "Mon to Fri 9am to 9pm"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:126
+#: .\aynTravelApp\templates\aynTravelApp\contact.html:91
 msgid "Send us your query anytime!"
 msgstr "Send us your query anytime!"
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:143
-msgid "Спасибо за сообщение"
-msgstr "Thank your for the message!"
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:29
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:29
 
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:172
-msgid "Отправить сообщение"
-msgstr "send message"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:200
-msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
-msgstr "Mon to Fri 9am to 9pm"
-
-#: .\aynTravelApp\templates\aynTravelApp\contact.html:215
-msgid "Наш адрес"
-msgstr "our address"
+msgid "Our Packages"
+msgstr "Our packages"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:45
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:45
 msgid "FEATURED TOURS Packages"
 msgstr "FEATURED TOURS Packages"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:46
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:46
 msgid "Favourite Places"
 msgstr "Favourite Places"
+
+#: .\aynTravelApp\templates\aynTravelApp\hotel.html:63
+msgid "Per Person"
+msgstr "Per Person"
 
 #: .\aynTravelApp\templates\aynTravelApp\hotel.html:67
 msgid "Days"
@@ -186,6 +165,14 @@ msgstr "Where would you like to go?"
 msgid "Destinations"
 msgstr "Destinations"
 
+#: .\aynTravelApp\templates\aynTravelApp\index.html:166
+msgid "Love where you"
+msgstr "Love where you"
+
+#: .\aynTravelApp\templates\aynTravelApp\index.html:167
+msgid "Travel around the world with Ayn Travel"
+msgstr "Travel around the world with Ayn Travel"
+
 #: .\aynTravelApp\templates\aynTravelApp\index.html:184
 msgid "Since 2018"
 msgstr "Since 2018"
@@ -195,65 +182,97 @@ msgid "About us"
 msgstr "About us"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:6
-#: .\templates\base.html:95
+#: .\templates\base.html:97
 msgid "Home"
 msgstr "Home"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:8
-#: .\templates\base.html:97
+#: .\templates\base.html:99
 msgid "Tourpackages"
 msgstr "Tourpackages"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:15
-#: .\templates\base.html:104
 msgid "Book Now"
 msgstr "Book Now"
 
 #: .\aynTravelApp\templates\aynTravelApp\menu_tpl.html:26
-#: .\templates\base.html:115
+#: .\templates\base.html:112
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: .\aynTravelApp\templates\aynTravelApp\offerform.html:20
-msgid "Забронировать"
-msgstr "Book Now"
+#: .\aynTravelApp\templates\aynTravelApp\view_offer.html:103
 
-#: .\templates\base.html:64 .\templates\base.html:196
-msgid "Address"
-msgstr "Address"
+msgid "Tour's price"
+msgstr "Tour's price"
 
-#: .\templates\base.html:179
+#: .\templates\base.html:167
+msgid "AYN TRAVEL is one of the leading travel companies in"
+msgstr "AYN TRAVEL is one of the leading travel companies in"
+
+#: .\templates\base.html:167
+msgid "Central Asia with branches in Uzbekistan"
+msgstr "Central Asia with branches in Uzbekistan"
+
+#: .\templates\base.html:176
 msgid "Quick Links"
 msgstr "Quick Links"
 
-#: .\templates\base.html:181
+#: .\templates\base.html:178
 msgid "home"
 msgstr "home"
 
-#: .\templates\base.html:182
+#: .\templates\base.html:179
 msgid "about us"
 msgstr "about us"
 
-#: .\templates\base.html:183
+#: .\templates\base.html:180
 msgid "tourpackages"
 msgstr "tourpackages"
 
-#: .\templates\base.html:184
-msgid "book now"
-msgstr ""
-
-#: .\templates\base.html:185
+#: .\templates\base.html:181
 msgid "contacts"
 msgstr "contacts"
 
-#: .\templates\base.html:194
+#: .\templates\base.html:190
 msgid "Contacts"
 msgstr "Contacts"
 
-#: .\templates\base.html:197
-msgid "Mon to Sun 9am to 9pm"
-msgstr "Mon to Sun 9am to 9pm"
-
-#: .\templates\base.html:210
+#: .\templates\base.html:206
 msgid "All rights reserved"
 msgstr "All rights reserved"
+
+#~ msgid "Tour"
+#~ msgstr "Tour"
+
+#~ msgid "Enter your name"
+#~ msgstr "Enter your name"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Enter Subject"
+#~ msgstr "Enter Subject"
+
+#~ msgid "address"
+#~ msgstr "address"
+
+#~ msgid "Mon to Fri 9am to 9pm"
+#~ msgstr "Mon to Fri 9am to 9pm"
+
+#~ msgid "Спасибо за сообщение"
+#~ msgstr "Thank your for the message!"
+
+#~ msgid "Отправить сообщение"
+#~ msgstr "send message"
+
+#~ msgid "(Прием звонков: 9:00 – 21:00 (Пн-Вс) )"
+#~ msgstr "Mon to Fri 9am to 9pm"
+
+#~ msgid "Наш адрес"
+#~ msgstr "our address"
+
+#~ msgid "Забронировать"
+#~ msgstr "Book Now"
+
+#~ msgid "Mon to Sun 9am to 9pm"
+#~ msgstr "Mon to Sun 9am to 9pm"

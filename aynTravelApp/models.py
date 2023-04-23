@@ -13,7 +13,7 @@ class Offer(models.Model):
     created_at = models.DateField(auto_now_add=True)
     category =  models.ForeignKey('Cat', on_delete=models.PROTECT, null=True)
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
-    is_published = models.BooleanField(default=True, verbose_name='Доступность')
+    available = models.BooleanField(default=True, verbose_name='Доступность')
     
     def get_absolute_url(self):
         return reverse('view_offer', kwargs={"offer_id": self.pk})
@@ -44,6 +44,7 @@ class Cat(models.Model):
     mark = models.IntegerField(verbose_name="оценка", null=True)
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
     price = models.IntegerField(verbose_name="Цена", null=True)
+    available = models.BooleanField(default=True, verbose_name='Доступность')
 
     
 
@@ -68,15 +69,20 @@ class ContactForm(models.Model):
         
 class Contact(models.Model):
     info = models.TextField(blank=True)
+    email = models.URLField(verbose_name='Почта администратора', null=True)
     address = models.CharField('address',max_length=150)
-    TelNum = models.CharField('tel.number',max_length=150)
+    TelNum = models.CharField(max_length=150, verbose_name='номер телефона')
+    working_time = models.CharField(max_length=150, verbose_name='Время работы', null=True)
+    link_tg = models.URLField(blank=True, verbose_name='ссылка на telegram')
+    link_ins = models.URLField(blank=True, verbose_name='ссылка на instagram')
+    link_fc = models.URLField(blank=True, verbose_name='ссылка на facebook')
 
     class Meta:
         verbose_name = 'контакты'
         verbose_name_plural = 'контакты'
 
 class Operator(models.Model):
-    author = models.CharField(max_length=50, verbose_name='Опрератор')
+    author = models.CharField(max_length=50, verbose_name='Оператор')
     text = models.TextField('Text', null=True)
     post =  models.CharField(max_length=50, verbose_name='Должность')
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография опрератора',blank=True, null=True)

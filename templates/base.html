@@ -55,27 +55,29 @@
         <div class="main-header ">
             <div class="header-top top-bg d-none d-lg-block">
                <div class="container">
+				{% for contact in contacts %}
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-8">
                         <div class="header-info-left">
                             <ul>                          
-                                <li>Umidkadirov582@gmail.com</li>
-                                <li>+998 91 544 31 60</li>
-                                <li>{% trans 'Address' %}</li>
+                                <li>{{contact.email}}</li>
+                                <li>{{contact.TelNum}}</li>
+                                <li>{{contact.address}}</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="header-info-right f-right">
                             <ul class="header-social">    
-                                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{contact.link_tg}}"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="{{contact.link_fc}}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{contact.link_ins}}"><i class="fab fa-instagram"></i></a></li>
       
                             </ul>
                         </div>
                     </div>
                    </div>
+				{% endfor %}
                </div>
             </div>
            <div class="header-bottom  header-sticky">
@@ -101,11 +103,6 @@
                                                  {% endblock %}
                                             </ul>
                                         </li>
-                                        <!-- <li><a href="{% url 'bronform' %}">{% trans 'Book Now' %}</a> -->
-                                            <!-- <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="single-blog.html">Blog Details</a></li>
-                                            </ul> -->
                                         </li>
                                         <!-- <li><a href="#">Pages</a>
                                             <ul class="submenu">
@@ -167,7 +164,7 @@
 							 </div>
 							 <div class="footer-tittle">
 								 <div class="footer-pera">
-									 <p>{% trans 'AYN TRAVEL is one of the leading travel companies in Central Asia with branches in Uzbekistan' %}</p>
+									 <p>{% trans 'AYN TRAVEL is one of the leading travel companies in' %} {% trans 'Central Asia with branches in Uzbekistan' %}</p>
 								</div>
 							 </div>
 						 </div>
@@ -181,27 +178,26 @@
 									<li><a href="{% url 'home' %}">{% trans 'home' %}</a></li>
 									<li><a href="{% url 'about' %}">{% trans 'about us' %}</a></li>
 									<li><a href="{% url 'offer' %}">{% trans 'tourpackages' %}</a></li>
-									<!-- <li><a href="{% url 'bronform' %}">{% trans 'book now' %}</a></li> -->
 									<li><a href="{% url 'contactForm' %}">{% trans 'contacts' %}</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-				 
+					{% for contact in contacts %}
 					<div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
 						<div class="single-footer-caption mb-50">
 							<div class="footer-tittle">
 								<h4>{% trans 'Contacts' %}</h4>
 								<ul>
-									<li>{% trans 'Address' %}</li>
-									<li> +998 91 544 3160 <br>{% trans 'Mon to Sun 9am to 9pm' %}</li>
-									<li> Umidkadirov582@gmail.com. </li>
+									<li>{{contact.address}}</li>
+									<li>{{contact.TelNum}}<br>{{contact.working_time}}</li>
+									<li>{{contact.email}}</li>
 							 
 								</ul>
 							</div>
 						</div>
 					</div>
-				
+					{% endfor %}
 				</div>
 				<!-- Footer bottom -->
 				<div class="row pt-padding">
@@ -213,12 +209,14 @@
 				 </div>
 				  <div class="col-xl-5 col-lg-5 col-md-5">
 						<!-- social -->
+						{% for link in contacts %}
 						<div class="footer-social f-right">
-							<a href="#"><i class="fab fa-telegram"></i></a>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="{{link.link_tg}}"><i class="fab fa-telegram"></i></a>
+							<a href="{{link.link_fc}}"><i class="fab fa-facebook-f"></i></a>
+							<a href="{{link.link_ins}}"><i class="fab fa-instagram"></i></a>
 							<!-- <a href="#"><i class="fas fa-globe"></i></a> -->
 						</div>
+						{% endfor %}
 				 </div>
 			 </div>
 			</div>

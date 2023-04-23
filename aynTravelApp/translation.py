@@ -11,7 +11,7 @@ class AboutTranslationOptions(TranslationOptions):
 
 @register(Contact)
 class ContactTranslationOptions(TranslationOptions):
-    fields =('info', 'address')
+    fields =('info', 'address','working_time')
 
 @register(Cat)
 class CatTranslationOptions(TranslationOptions):

@@ -7,6 +7,5 @@ urlpatterns = [
     path('alltourpackages', alltourpackages, name='offer'),
     path('offer/<int:offer_id>/', view_offer, name='view_offer'),
     path('about', aboutUs,name = 'about'),
-    path('bronform', bronform, name='bronform'),
     path('contactForm', contactForm, name='contactForm'),
 ]

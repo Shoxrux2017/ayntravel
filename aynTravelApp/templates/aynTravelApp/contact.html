@@ -68,29 +68,31 @@
                              </div>
                         </form>
                     </div>
+                    {% for contact in contacts %}
                     <div class="col-lg-3 offset-lg-1">
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
                                 <h3>{% trans 'Address' %}</h3>
-                                <p>{% trans 'address' %}</p>
+                                <p>{{contact.address}}</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>+998 91 544 31 60</h3>
-                                <p>{% trans 'Mon to Fri 9am to 9pm' %}</p>
+                                <h3>{{contact.TelNum}}</h3>
+                                <p>{{contact.working_time}}</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>Umidkadirov582@gmail.com.</h3>
+                                <h3>{{contact.email}}</h3>
                                 <p>{% trans 'Send us your query anytime!' %}</p>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
