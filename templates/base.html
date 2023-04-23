@@ -101,7 +101,7 @@
                                                  {% endblock %}
                                             </ul>
                                         </li>
-                                        <li><a href="{% url 'bronform' %}">{% trans 'Book Now' %}</a>
+                                        <!-- <li><a href="{% url 'bronform' %}">{% trans 'Book Now' %}</a> -->
                                             <!-- <ul class="submenu">
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="single-blog.html">Blog Details</a></li>
@@ -112,7 +112,7 @@
                                                 <li><a href="elements.html">Element</a></li>
                                             </ul>
                                         </li> -->
-                                        <li><a href="{% url 'contact' %}">{% trans 'Contact Us' %}</a></li>
+                                        <li><a href="{% url 'contactForm' %}">{% trans 'Contact Us' %}</a></li>
 										<li>
 											<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
 												<input name="next" type="hidden" value="{{ redirect_to }}">
@@ -121,12 +121,12 @@
 													{% get_available_languages as LANGUAGES %}
 													{% get_language_info_list for LANGUAGES as languages %}
 													{% for language in languages %}
-														<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+														<option style="background-image:url('/static/img/flags/ru.jpg');" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
 															{{ language.name_local }} ({{ language.code }})
 														</option>
 													{% endfor %}
 												</select>	
-												<input type="submit" value="go">
+												<input type="submit" value="go" class="genric-btn success ml-10">
 											</form>
 										</li>
                                     </ul>
@@ -181,8 +181,8 @@
 									<li><a href="{% url 'home' %}">{% trans 'home' %}</a></li>
 									<li><a href="{% url 'about' %}">{% trans 'about us' %}</a></li>
 									<li><a href="{% url 'offer' %}">{% trans 'tourpackages' %}</a></li>
-									<li><a href="{% url 'bronform' %}">{% trans 'book now' %}</a></li>
-									<li><a href="{% url 'contact' %}">{% trans 'contacts' %}</a></li>
+									<!-- <li><a href="{% url 'bronform' %}">{% trans 'book now' %}</a></li> -->
+									<li><a href="{% url 'contactForm' %}">{% trans 'contacts' %}</a></li>
 								</ul>
 							</div>
 						</div>

@@ -6,7 +6,7 @@
 	<!-- slider Area Start-->
 	   <div class="slider-area ">
         <!-- Mobile Menu -->
-        <div class="single-slider slider-height2 d-flex align-items-center" data-background="static/img/hero/about.jpg">
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="/static/img/hero/about.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -48,8 +48,14 @@
                    </div>
    
                    <div class="form-outline mb-4">
-                     <input type="text" id="form3Example4cdg" class="form-control form-control-lg" />
-                     <label class="form-label" for="form3Example4cdg">{% trans 'Tour's name' %}</label>
+                    <label class="form-label" for="form3Example4cdg">{% trans "Tour's name" %}</label>
+                    <select name="form3Example4cdg" id="form3Example4cdg" >
+                      {% for offer in offers %}
+                      <option value="{{offer.title}}">{{offer.title}}</option>
+                    {% endfor %}
+                    </select>
+                     <!-- <input type="text" id="form3Example4cdg" class="form-control form-control-lg" /> -->
+                    
                    </div>
    
                 

@@ -45,11 +45,16 @@ class Cat(models.Model):
     photo = models.FileField(upload_to='Photos/%Y/%m/%d', verbose_name='фотография турпакета',blank=True, null=True)
     price = models.IntegerField(verbose_name="Цена", null=True)
 
+    
+
     def __str__(self):
         return self.city
     class Meta:
         verbose_name = 'категория турпакета'
         verbose_name_plural = 'категории турпакетов'
+
+    def get_absolute_url(self):
+        return reverse('get_category', kwargs={"category_id": self.pk})
         
 
 class ContactForm(models.Model):

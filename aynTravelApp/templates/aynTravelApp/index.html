@@ -69,7 +69,7 @@
 			</div>
 			<div class="row">
 				{% for category in categories %}
-				<a href="{% url 'offer' %}">
+				<a href="{{ category.get_absolute_url }}">
 				<div class="col-xl-4 col-lg-4 col-md-6">
 					<div class="single-place mb-30">
 						<div class="place-img">
@@ -78,7 +78,7 @@
 						<div class="place-cap">
 							<div class="place-cap-top">
 								<span><i class="fas fa-star"></i><span>{{category.mark}}/10</span> </span>
-								<h3><a href="{%  url 'offer' %}">{{category.city}}</a></h3>
+								<h3><a href="#">{{category.city}}</a></h3>
 								<p class="dolor">from ${{category.price}} <span>/ Per Person</span></p>
 							</div>
 							<div class="place-cap-bottom">

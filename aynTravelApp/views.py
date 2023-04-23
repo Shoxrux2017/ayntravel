@@ -22,14 +22,7 @@ def index(request):
     }
     return render(request, template_name='aynTravelApp/index.html',context=context)
 
-def contact(request):
-    category = Cat.objects.all()
-    contactDetails = Contact.objects.all()
-    context = {
-        'contacts':contactDetails,
-        'category':category,
-    }
-    return render(request, 'aynTravelApp/contact.html',context=context)
+
 
 def aboutUs(request):
     aboutUs = About.objects.all()
@@ -41,16 +34,17 @@ def aboutUs(request):
     return render(request, 'aynTravelApp/about.html',context=context)
     
 def contactForm(request):
+    category = Cat.objects.all()
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             # print(form.cleaned_data)
             # news = News.objects.create(**form.cleaned_data)
-            contact = form.save()
-            return redirect(contact)
+            form.save()
+            return redirect('home')
     else:
         form = ContactForm()
-    return render(request, 'aynTravelApp/contact.html', {'form': form})
+    return render(request, 'aynTravelApp/contact.html', {'form': form, 'categories':category,})
 
 
 
@@ -60,16 +54,16 @@ def handle_uploaded_file(f):
             destination.write(chunk)            
 
 
-def bronform(request, category_id): 
-    offer = Offer.objects.filter(category_id=category_id)
-    categories = Cat.objects.all()
-    category = Cat.objects.filter(pk=category_id)
-    context = {'offers':offer,
-                'categories': categories,
-                'category':category      
+def bronform(request): 
+  
+    offers = Offer.objects.all()
+
+    context = {
+                'offers': offers,
+               
     }
 
-    return render(request, 'aynTravelApp/blog.html')
+    return render(request, 'aynTravelApp/blog.html', context = context)
 
 def view_offer(request, offer_id):
     category = Cat.objects.all()

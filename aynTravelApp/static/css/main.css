@@ -5753,7 +5753,7 @@ b,sup,sub,u,del {
 }
 
 .header-sticky ul li a {
-    padding: 10px 19px
+    padding: 10px 19px 10px 5px
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
@@ -7150,3 +7150,26 @@ form.search-box .search-form a {
     font-size: 50px;
     font-weight: 700
 }
+
+.flag {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 5px;
+    padding-bottom: 15px;
+  }
+  
+  .flag-en {
+    background-image: url('/static/img/flags/en.png');
+  }
+  
+  .flag-ru {
+    background-image: url('/static/img/flags/ru.png');
+  }
+
+  .flag-uz {
+    background-image: url('/static/img/flags/uz.png');
+  }
